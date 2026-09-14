@@ -3,14 +3,17 @@ package lab1;
 public class Reduce {
     public static void main(String[] args) {
         int n = 100;
-        int count = 0;
 
+        System.out.println(reduce(n));
+    }
+
+    public static int reduce(int n) {
+        int count = 0;
         while (n > 0) {
             n = doReduction(n);
             count++;
         }
-
-        System.out.println(count);
+        return count;
     }
 
     public static int doReduction(int input) {
