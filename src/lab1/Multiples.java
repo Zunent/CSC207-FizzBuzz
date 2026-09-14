@@ -10,13 +10,22 @@ public class Multiples {
     }
 
     public static int multiples(int n, int a, int b) {
-        int count = 0;
-        for (int i = 1; i < n; i++) {
-            if (i % a == 0 || i % b == 0) {
-                count++;
-            }
+//        int count = 0;
+//        for (int i = 1; i < n; i++) {
+//            if (i % a == 0 || i % b == 0) {
+//                count++;
+//            }
+//        }
+//        return count;
+        n--;
+        if (a != b) {
+            int a_count = (n / a);
+            int b_count = (n / b);
+            int ab_count = (n / (a * b));
+            return (a_count + b_count - ab_count);
+        } else {
+            return (n / a);
         }
-        return count;
     }
 
     public static int multiples() {
